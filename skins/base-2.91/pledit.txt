@@ -1,0 +1,11 @@
+; Do not change anything!
+; ideas? ak@smartftp.com
+; -----------------------------
+[Text]
+Normal=#000000
+Current=#3966A0
+NormalBG=#FFFFFF
+SelectedBG=#9AC1EA
+Font=Lucida Grande
+mbBG=#FFFFFF
+mbFG=#000000

@@ -1,0 +1,44 @@
+   body {
+       background: url(./images/2.jpg) no-repeat center center fixed;
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
+       color: aliceblue;
+       text-align: center;
+   }
+   
+   real_madrid {
+       display: table;
+       border-spacing: 20px;
+       border: aliceblue 10px solid;
+       border-style: double;
+   }
+   
+   equipo,
+   ciudad,
+   entrenador,
+   nombre,
+   nacionalidad,
+   jugadores {
+       display: table-row-group;
+       border-spacing: 20px;
+       border: aliceblue 2px solid;
+       text-transform: uppercase;
+   }
+   
+   jugador:hover,
+   jugador:active,
+   jugador:focus {
+       color: rgb(0, 139, 0);
+       text-decoration: none;
+       caption-side: top;
+   }
+   
+   entrenador:hover,
+   entrenador:active,
+   entrenador:focus {
+       color: rgb(187, 3, 43);
+       text-decoration: none;
+       background: url(images/maradona.jpg)left no-repeat;
+   }
