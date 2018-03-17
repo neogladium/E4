@@ -1,51 +1,103 @@
-<!-- <!DOCTYPE html> -->
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Winamp2-js</title>
+    <title>Práctica E4 Winamp2-js</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Winamp 2.9 reimplemented in HTML5 and JavaScript" />
-    <meta property="og:title" content="Winamp2-js &bull; Winamp in your browser" />
-    <meta property="og:description" content="Winamp 2.9 reimplemented in HTML5 and JavaScript" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jordaneldredge.com/projects/winamp2-js/" />
-    <meta property="og:image" content="https://jordaneldredge.com/projects/winamp2-js/preview.png" />
     <link rel="stylesheet" type="text/css" href="css/page.css" />
     <link rel="shortcut icon" sizes="16x16 32x32" href="favicon.ico">
+    <style>
+        .async-hide {
+            opacity: 0 !important
+        }
+    </style>
+    <script>
+        (function(a, s, y, n, c, h, i, d, e) {
+            s.className += ' ' + y;
+            h.start = 1 * new Date;
+            h.end = i = function() {
+                s.className = s.className.replace(RegExp(' ?' + y), '')
+            };
+            (a[n] = a[n] || []).hide = h;
+            setTimeout(function() {
+                i();
+                h.end = null
+            }, c);
+            h.timeout = c;
+        })(window, document.documentElement, 'async-hide', 'dataLayer', 4000, {
+            'GTM-T6F9JLC': true
+        });
+    </script>
     <!-- Botón para unificar equipo -->
     <input type="button" name="Submit" value="Acceso a Equipo.xhtml" onclick="window.open('equipo.xhtml', 'popup')">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115882765-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-115882765-1');
+    </script>
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-115882765-1', 'auto');
+        ga('require', 'GTM-T6F9JLC');
+        ga('send', 'pageview');
+    </script>
+
 </head>
 
 <body>
     <div id="app">
         <div id="loading">
-            Loading<span class="ellipsis-anim"><span>.</span><span>.</span><span>.</span></span>
+            Loading
+            <span class="ellipsis-anim">
+                <span>.</span>
+            <span>.</span>
+            <span>.</span>
+            </span>
         </div>
     </div>
     <div id="browser-compatibility">
         <p>Your browser does not support the features we need.</p>
         <p>Try using the most recent version of Chrome, Firefox, Safari or Edge.</p>
     </div>
-    <p class="información">
-        <!--     <a href="mailto:jordan@jordaneldredge.com?subject=Winamp2-js%20Feedback">Feedback</a>  -->
-        <a>Práctica E4</a> |
-        <a href="https://github.com/neogladium/E4.git">GitHub</a>
-    </p>
+
     <!-- <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="7py29249dpeddu8"></script> -->
-    <script src="built/winamp.js"></script>
+    <script src="js/winamp.js"></script>
 
-    <!-- Ventana incrustada prueba
-    <iframe src="http://www.lipsum.com/" width="100%" height="500px"></iframe>  -->
-
-    <!-- Stream player centrado-->
-    <div style="text-align:center;">
-        <iframe name="contenedorPlayer" class="cuadroBordeado" width="250px" height="140px" marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no src="http://cp.usastreams.com/html5-player-barra-meter.aspx?stream=http://cdn.aka1.usastreams.com:8000/usastreams&fondo=05&formato=mpeg&color=14&titulo=2&autoStart=1&vol=5&nombre=Radio+TOP40&imagen=http://cp.usastreams.com/playerHTML5/img/cover.png"><a href="http://www.usastreams.com/" Alt = "Usastreams.com posicionamiento web, Servicios SEO y SEM, servicios streaming" title="Servicios streaming broadcast de canales de televison ,streaming para video en vivo por internet ,Planes y Tarifas de Streaming ,hosting de tv online gratis,">streaming hosting radio ,Servicios SEO</a></iframe>
-    </div>
     <!-- Inserción de youtube-->
     <div style="text-align:unset;">
         <iframe width="460" height="215" src="https://www.youtube.com/embed/l0CHGEoSz4c" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
+    <!-- Inserción de Ivoox -->
+    <div style="text-align:end;">
+        <iframe width="40%" height="200" frameborder="0" allowfullscreen="" scrolling="no" src="https://www.ivoox.com/player_ej_24503252_2_1.html?data=k5mikpiWeZOhhpywj5qcaZS1lpiah5yncZKhhpywj5WRaZi3jpWah5ynca_pxtjh1NSPqs3VzsrbxdSPcYy5zZDQw9LNssLmjMnSjanFusrYjLXW0NSPcYylloqfqJWXaZO6kp2ah5yncbPIt6qah5yncZE.&"></iframe>
+    </div>
+    <!-- Inserción de Ivoox mini -->
+    <div style="text-align:end;">
+        <iframe width="238" height="48" frameborder="0" allowfullscreen="" scrolling="no" src="https://www.ivoox.com/player_ek_416938_2_1.html?data=lZajm5iccYarpJKdlYqXhZGkjoqkpZKVcYarpJKdj4qbh46kjoqkpZKspcPVz8rfw5DKsMLhxtPQw5CJdpm41srbxsrFssXjhpemj4qbh47Gtbuyj4qbh46k&"></iframe>
+    </div>
+    <p class="about">
+        <a href=" https://practicae4.000webhostapp.com/">Website de la práctica E4</a>|
+        <a href="https://github.com/neogladium/E4.git">GitHub de la práctica E4</a>
+    </p>
 </body>
 
-<!-- </html> -->
+</html>
